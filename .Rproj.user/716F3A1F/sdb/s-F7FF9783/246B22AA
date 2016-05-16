@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nlibrary(xlsx)\nstoredata = read.xlsx(\"store_data.xlsx\",1)\n\nshinyUI(pageWithSidebar(\n  headerPanel('Using K-means clustering on Customer Data of a Supermarket'),\n  sidebarPanel(\n    selectInput('xcol', 'X Variable', names(storedata)),\n    selectInput('ycol', 'Y Variable', names(storedata)),\n    numericInput('clusters', 'Cluster count', 1,\n                 min = 1, max = 9), \n    helpText(\"Imagine you are the marketing manager, and you have been asked to run marketing campaigns on specific subsets of customers\")\n  ),\n  mainPanel(\n    tabsetPanel(type=\"tabs\",\n      tabPanel(\"Data table\",tableOutput('table1')),\n      tabPanel(\"Plot\",plotOutput('plot1')))\n    \n  )\n))\n",
+    "created" : 1462889100733.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1734192183",
+    "id" : "246B22AA",
+    "lastKnownWriteTime" : 1463071814,
+    "last_content_update" : 1463071814004,
+    "path" : "C:/Users/Daniel/Desktop/R projects/kmeans/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
